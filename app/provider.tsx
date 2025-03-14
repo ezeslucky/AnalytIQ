@@ -1,7 +1,8 @@
 import React from "react";
 import { headers } from "next/headers";
 import { SessionProvider } from "next-auth/react";
-import { auth } from "@/auth";
+import { auth } from "../auth";
+
 
 type Props = {
   children: React.ReactNode;
