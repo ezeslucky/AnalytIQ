@@ -1,11 +1,14 @@
  "use client"
  import React from 'react'
 
+
 function Sidebar() {
+  const {isCollapsed, toogleSidebar} = useSidebar()
   return (
-    <div>
-      
-    </div>
+    <aside className=''>
+
+
+    </aside>
   )
 }
 
