@@ -1,6 +1,6 @@
 # AnalytIQ
 
-
+Comprehensive analytics dashboard offering real-time business insights, interactive data visualization, key performance metrics, and fully customizable reporting tools for data-driven decision-making.
 
 ## 🛠 Installation
 
