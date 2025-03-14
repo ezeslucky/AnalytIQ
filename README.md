@@ -7,7 +7,7 @@
 To get started, clone the repository and install dependencies:
 
 ```bash
-git clone https://github.com/ezeslucky/AnalytIQ .git
+git clone https://github.com/ezeslucky/AnalytIQ.git
 cd AnalytIQ 
 yarn install
 ```
@@ -28,7 +28,7 @@ Click the "Fork" button at the top-right of the repository page to create your o
 
 ### 2. Clone Your Fork
 ```bash
-git clone https://github.com/YOUR_GITHUB_USERNAME/AnalytIQ .git
+git clone https://github.com/YOUR_GITHUB_USERNAME/AnalytIQ.git
 cd AnalytIQ 
 ```
 
