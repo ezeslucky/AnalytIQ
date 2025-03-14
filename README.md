@@ -1,6 +1,6 @@
 # AnalytIQ
 
-Comprehensive analytics dashboard offering real-time business insights, interactive data visualization, key performance metrics, and fully customizable reporting tools for data-driven decision-making.Advanced analytics dashboard for business intelligence, featuring interactive data visualization, KPI tracking, real-time analytics, performance metrics, in-depth data analysis, actionable business insights, and customizable reporting tools.
+Comprehensive analytics dashboard offering real-time business insights, interactive data visualization, key performance metrics, and fully customizable reporting tools for data-driven decision-making. Advanced analytics dashboard for business intelligence, featuring interactive data visualization, KPI tracking, real-time analytics, performance metrics, in-depth data analysis, actionable business insights, and customizable reporting tools.
 
 ## 🛠 Installation
 
