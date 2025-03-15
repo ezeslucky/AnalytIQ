@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
  "use client"
  import React from 'react'
 import { useSidebar } from '../../contexts/sidebar-context'
@@ -7,9 +8,13 @@ import Image from 'next/image'
 import { LogOut, PanelRightClose, PanelRightOpen } from 'lucide-react'
 import { Button } from '../ui/button'
 import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar'
+import sidebarLinks from '../../config/sidebar'
+import { SidebarLink } from './sidebar-links'
+import { useMediaQuery } from '../../hooks/use-media-query'
 
 
 export const  Sidebar = () =>{
+  //@ts-ignore
   const {isCollapsed, toggleSidebar} = useSidebar()
   const isMobile = useMediaQuery("(max-width: 768px)")
   const session = useSession()
