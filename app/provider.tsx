@@ -1,7 +1,8 @@
 import React from "react";
 import { headers } from "next/headers";
 import { SessionProvider } from "next-auth/react";
-import { auth } from "../auth";
+import { auth } from "auth";
+
 
 
 type Props = {
@@ -9,7 +10,7 @@ type Props = {
 };
 
 const Provider = async ({ children }: Props) => {
-  
+ 
   await headers();
 
   
@@ -19,3 +20,5 @@ const Provider = async ({ children }: Props) => {
 };
 
 export default Provider;
+
+
