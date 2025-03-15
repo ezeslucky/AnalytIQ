@@ -1,33 +1,36 @@
- "use client"
- import React from 'react'
-import { useSidebar } from '../../contexts/sidebar-context'
-import { signOut, useSession } from 'next-auth/react'
-import Link from 'next/link'
-import Image from 'next/image'
-import { LogOut, PanelRightClose, PanelRightOpen } from 'lucide-react'
-import { Button } from '../ui/button'
-import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar'
+"use client";
 
 
-export const  Sidebar = () =>{
-  const {isCollapsed, toggleSidebar} = useSidebar()
-  const isMobile = useMediaQuery("(max-width: 768px)")
-  const session = useSession()
-  
+import sidebarLinks from "@/config/sidebar";
+import { useSidebar } from "@/contexts/sidebar-context";
+import { useMediaQuery } from "@/hooks/use-media-query";
+import { LogOut, PanelRightClose, PanelRightOpen } from "lucide-react";
+import { signOut, useSession } from "next-auth/react";
+import Image from "next/image";
+import Link from "next/link";
+import { SidebarLink } from "./sidebar-links";
+
+export const Sidebar = () => {
+  const { isCollapsed, toggleSidebar } = useSidebar();
+  const isMobile = useMediaQuery("(max-width: 768px)");
+  const session = useSession();
+
   return (
-    <aside className={`${
-      isCollapsed ? 'w-16' : 'w-56'
-    } bg-black transition-all duration-300 flex flex-col h-full pb-0`}>
-<div className=' flex justify-between items-center h-full gap-2 p-4 pr-0'>
-  {!isCollapsed && (
-    <Link href='/' className=' flex justify-between items-center gap-2 '>
-      <Image src='/logo.svg'  width={28} height={28} alt='logo' />
-      <span className=' bg-clip-text bg-gradient-to-r text-transparent text-xl'>
-AnalytIQ
-      </span>
-    </Link>
-  )}
-  {!isMobile && (
+    <aside
+      className={`${
+        isCollapsed ? "w-16" : "w-56"
+      } bg-black transition-all duration-300 flex flex-col h-full pb-0`}
+    >
+      <div className="flex justify-between items-center gap-2 p-4 pr-0">
+        {!isCollapsed && (
+          <Link href="/" className="flex items-center gap-2">
+            <Image src="/logo.svg" width={28} height={28} alt="Logo" />
+            <span className="bg-clip-text bg-gradient-to-r from-white to-neutral-500 font-medium text-transparent text-xl">
+              Weblytics
+            </span>
+          </Link>
+        )}
+        {!isMobile && (
           <Button
             size="icon"
             onClick={toggleSidebar}
@@ -40,9 +43,8 @@ AnalytIQ
             )}
           </Button>
         )}
-
-</div>
-<nav className="flex-1">
+      </div>
+      <nav className="flex-1">
         <ul className="space-y-2 p-2">
           {sidebarLinks.map((link) => (
             <SidebarLink key={link.href} {...link} isCollapsed={isCollapsed} />
@@ -83,7 +85,7 @@ AnalytIQ
         </Button>
       </div>
     </aside>
-  )
-}
-
+  );
+};
+export { SidebarLink };
 
