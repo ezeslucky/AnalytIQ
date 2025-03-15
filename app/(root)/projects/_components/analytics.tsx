@@ -1,14 +1,18 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
-
+import {
+  NextJsScript,
+  nextJsScript,
+  reactJsScript,
+  ReactJsScript,
+} from "@/config/code";
+import { useTabStore } from "@/store/store";
 import { ArrowUp, CloudAlert } from "lucide-react";
 import { useEffect, useState } from "react";
 import { toast } from "sonner";
 import { AnalyticsGraph } from "./analytics-graph";
 import { ScriptDisplay } from "./script";
-import { useTabStore } from "../../../../store/store";
-import { nextJsScript, NextJsScript, reactJsScript, ReactJsScript } from "../../../../config/code";
 
 export const Analytics = ({ analytics }: { analytics: any }) => {
   const { activeTab } = useTabStore();

@@ -1,7 +1,6 @@
 import { Package } from "lucide-react";
-
+import { Skeleton } from "@/components/ui/skeleton";
 import { AnimatedTabs } from "./animated-tab";
-import { Skeleton } from "../../../../components/ui/skeleton";
 
 const WebsiteDetailSkeleton = () => {
   const tabs = [

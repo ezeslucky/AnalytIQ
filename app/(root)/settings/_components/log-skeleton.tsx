@@ -1,10 +1,15 @@
 "use client";
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../../../../components/ui/card";
-import { Skeleton } from "../../../../components/ui/skeleton";
-import { useSettingsTabStore } from "../../../../store/store";
+import { Skeleton } from "@/components/ui/skeleton";
 
-
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { useSettingsTabStore } from "@/store/store";
 export const LogsSkeleton = () => {
   const { activeTab } = useSettingsTabStore();
 

@@ -1,9 +1,7 @@
 "use client";
 
-import { MotionTab } from "../../../../components/global/motion-tab";
-import { useTabStore } from "../../../../store/store";
-
-
+import { MotionTab } from "@/components/globals/motion-tab";
+import { useTabStore } from "@/store/store";
 
 type Props = {
   tabs: { id: string; label: string }[];

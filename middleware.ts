@@ -1,7 +1,6 @@
-import { DEFAULT_LOGIN_REDIRECT, PUBLIC_ROUTES, AUTH_ROUTES } from "./routes";
+import { DEFAULT_LOGIN_REDIRECT, PUBLIC_ROUTES, AUTH_ROUTES } from "@/routes";
 import { NextResponse } from "next/server";
-import { auth } from "./auth";
-
+import { auth } from "@/auth";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default auth((req: any) => {

@@ -1,14 +1,20 @@
 "use client";
 
-
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { useSettingsTabStore } from "@/store/store";
 import { Bug } from "lucide-react";
 import { useEffect, useState } from "react";
-
+import { useModal } from "@/store/store";
 import { CreateBugReportModal } from "./report-bug";
 import { BugReportSkeleton } from "./bug-skeleton";
-import { useModal, useSettingsTabStore } from "../../../../store/store";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../../../../components/ui/card";
-import { Button } from "../../../../components/ui/button";
 
 export const Issues = () => {
   const { activeTab } = useSettingsTabStore();

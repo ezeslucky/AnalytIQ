@@ -1,7 +1,6 @@
-
+import { CodeDisplay } from "@/config/code";
 import { Copy } from "lucide-react";
 import React from "react";
-import { CodeDisplay } from "../../../../config/code";
 
 interface ScriptDisplayProps {
   html: string;

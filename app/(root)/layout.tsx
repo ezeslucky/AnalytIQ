@@ -1,9 +1,8 @@
-
+import { ComponentWrapper } from "@/components/globals/component-wrapper";
+import { Navbar } from "@/components/layout/navbar";
+import { Sidebar } from "@/components/layout/sidebar";
+import { SidebarProvider } from "@/contexts/sidebar-context";
 import type { Metadata } from "next";
-import { SidebarProvider } from "../../contexts/sidebar-context";
-import { Sidebar } from "../../components/global/sidebar";
-import Navbar from "../../components/global/navbar";
-import { ComponentWrapper } from "../../components/global/component-wrapper";
 
 export const metadata: Metadata = {
   title: "Analytics Dashboard | Web Traffic & Insights",

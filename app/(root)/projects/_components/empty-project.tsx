@@ -1,10 +1,9 @@
 "use client";
 
-
+import { Button } from "@/components/ui/button";
+import { useModal } from "@/store/store";
 import Image from "next/image";
 import React from "react";
-import { useModal } from "../../../../store/store";
-import { Button } from "../../../../components/ui/button";
 
 export const EmptyProject = () => {
   const { onOpen } = useModal();

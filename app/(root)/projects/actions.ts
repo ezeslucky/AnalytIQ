@@ -1,9 +1,7 @@
 // src/app/api/metadata/actions.ts
 "use server";
 
-import { extractMetadata } from "../../../lib/metadata";
-
-
+import { extractMetadata } from "@/lib/metadata";
 
 export async function fetchMetadataAction(domain: string) {
   try {

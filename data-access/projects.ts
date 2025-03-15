@@ -1,6 +1,5 @@
 import "server-only";
-import prisma from "../lib/db";
-
+import prisma from "@/lib/db";
 
 export const getProjects = async (userId: string) => {
   const res = await prisma.project.findMany({

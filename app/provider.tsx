@@ -8,10 +8,10 @@ type Props = {
 };
 
 const Provider = async ({ children }: Props) => {
-  
+  // Wait for headers to be available
   await headers();
 
-  
+  // Now we can safely call auth()
   const session = await auth();
 
   return <SessionProvider session={session}>{children}</SessionProvider>;

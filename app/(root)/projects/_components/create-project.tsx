@@ -1,9 +1,8 @@
 "use client";
 
-
+import { useKeyboardShortcut, useModal } from "@/store/store";
 import { Command } from "lucide-react";
 import React from "react";
-import { useKeyboardShortcut, useModal } from "../../../../store/store";
 
 export const CreateProject = () => {
   const { onOpen } = useModal();

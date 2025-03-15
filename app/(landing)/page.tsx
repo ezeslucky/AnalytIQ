@@ -1,8 +1,8 @@
 import React from "react";
-import Hero from "./components/hero";
-import FAQ from "./components/faq";
-import CTA from "./components/cta";
-import Perks from "./components/features"
+import Hero from "./_components/hero";
+import Perks from "./_components/features";
+import FAQ from "./_components/faq";
+import CTA from "./_components/cta";
 
 const HomePage = () => {
   return (

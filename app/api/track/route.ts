@@ -1,8 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { DeviceType } from "@prisma/client";
 import { UAParser } from "ua-parser-js";
-import prisma from "../../../lib/db";
-
+import prisma from "@/lib/db";
 
 const countryNames: Record<string, string> = {
   US: "United States",

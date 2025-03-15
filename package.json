@@ -3,21 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "lint:fix": "eslint --fix \"**/*.{js,jsx,ts,tsx}\"",
-    "postinstall": "prisma generate",
-    "prepare": "husky"
-  },
-  "lint-staged": {
-    "**/*.{js,json}": [
-      "yarn run format",
-      "yarn run lint:fix",
-      "git add"
-    ]
+    "lint": "next lint"
   },
   "dependencies": {
     "@auth/prisma-adapter": "^2.7.4",

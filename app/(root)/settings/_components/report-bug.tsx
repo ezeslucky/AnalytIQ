@@ -1,16 +1,20 @@
 "use client";
 
-
+import {
+  Dialog,
+  DialogContent,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import { toast } from "sonner";
 import axios from "axios";
-;
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { useModal } from "@/store/store";
 import { Bug } from "lucide-react";
 import { useState, useCallback, memo, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { useModal } from "../../../../store/store";
-import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from "../../../../components/ui/dialog";
-import { Input } from "../../../../components/ui/input";
-import { Textarea } from "../../../../components/ui/textarea";
 
 export const CreateBugReportModal = memo(() => {
   const { isOpen, type, onClose } = useModal();

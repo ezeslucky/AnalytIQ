@@ -1,4 +1,5 @@
-
+import { assertAuthenticated } from "@/lib/session";
+import { getAllProjects } from "@/use-cases/projects";
 import { Suspense } from "react";
 import { EmptyProject } from "./_components/empty-project";
 import { Header } from "./_components/header";
@@ -7,8 +8,6 @@ import { DeleteModal } from "./_components/modal/delete";
 import { EditModal } from "./_components/modal/edit";
 import { ProjectCard } from "./_components/project-card";
 import { ProjectSkelteon } from "./_components/project-skeleton";
-import { assertAuthenticated } from "../../../lib/session";
-import { getAllProjects } from "../../../use-cases/projects";
 
 const ProjectsPage = async () => {
   return (

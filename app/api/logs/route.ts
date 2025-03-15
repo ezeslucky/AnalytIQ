@@ -1,7 +1,6 @@
-
+import { auth } from "@/auth";
+import prisma from "@/lib/db";
 import { NextResponse } from "next/server";
-import { auth } from "../../../auth";
-import prisma from "../../../lib/db";
 
 export async function POST(req: Request) {
   try {

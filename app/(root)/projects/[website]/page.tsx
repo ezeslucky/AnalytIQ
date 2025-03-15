@@ -1,4 +1,5 @@
-
+import { ProjectProvider } from "@/contexts/project-context";
+import { getAnalytics } from "@/use-cases/projects";
 import { Suspense } from "react";
 import { Analytics } from "../_components/analytics";
 import { AnimatedTabs } from "../_components/animated-tab";
@@ -8,8 +9,6 @@ import { Metadata } from "../_components/metadata";
 import { MetadataError } from "../_components/metadata-error";
 import { ProjectData } from "../_components/project-data";
 import WebsiteDetailSkeleton from "../_components/website-skeleton";
-import { ProjectProvider } from "../../../../contexts/project-context";
-import { getAnalytics } from "../../../../use-cases/projects";
 
 type Props = {
   params: Promise<{ website: string }>;

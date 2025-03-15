@@ -4,7 +4,7 @@ import {
   getDomainProject,
   getLogs,
   getProjects,
-} from "../data-access/projects";
+} from "@/data-access/projects";
 
 import { unstable_cache as cache } from "next/cache";
 

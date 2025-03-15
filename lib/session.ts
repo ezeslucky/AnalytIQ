@@ -1,8 +1,7 @@
 import "server-only";
 
-
+import { auth } from "@/auth";
 import { AuthenticationError } from "./utils";
-import { auth } from "../auth";
 
 export const getCurrentUser = async () => {
   const session = await auth();

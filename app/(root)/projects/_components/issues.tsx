@@ -1,9 +1,8 @@
 "use client";
 
-
+import { useTabStore } from "@/store/store";
 import { Construction } from "lucide-react";
 import React from "react";
-import { useTabStore } from "../../../../store/store";
 
 export const Issues = () => {
   const { activeTab } = useTabStore();

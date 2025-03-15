@@ -1,11 +1,8 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-//@ts-ignore
+import { authConfig } from "@/auth.config";
+import db from "@/lib/db";
 import { PrismaAdapter } from "@auth/prisma-adapter";
 import type { DefaultSession } from "next-auth";
 import NextAuth from "next-auth";
-import Google from "next-auth/providers/google";
-import { authConfig } from "./auth.config";
-import db from "./lib/db";
 
 declare module "next-auth" {
   interface Session {
@@ -16,7 +13,7 @@ declare module "next-auth" {
   }
 }
 
-
+import Google from "next-auth/providers/google";
 
 declare module "next-auth" {
   interface User {
@@ -42,7 +39,9 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
   callbacks: {
     async jwt({ token, user }) {
       if (user) {
-        
+        // get user from db with the email
+        // if there is no user with the email, create new user
+        // else set the user data to token
         token.id = user.id;
         token.role = user.role || "USER";
       }
@@ -51,7 +50,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
 
     async session({ session, token }) {
       if (token) {
-   
+        // set the token data to session
         if (session.user) {
           session.user.id = token.id as string;
           session.user.role = token.role as string;

@@ -2,10 +2,9 @@
 
 import React from "react";
 import Link from "next/link";
-
+import { useProject } from "@/contexts/project-context";
 import { Package, SquareArrowOutUpRight } from "lucide-react";
 import Image from "next/image";
-import { useProject } from "../../../../contexts/project-context";
 type Props = {
   website: string;
   websiteData: {

@@ -1,9 +1,14 @@
 "use client";
 
-
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { useSettingsTabStore } from "@/store/store";
 import { AlertCircle, Bell, CloudAlert } from "lucide-react";
-import { useSettingsTabStore } from "../../../../store/store";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../../../../components/ui/card";
 
 // Map log levels to colors
 const logLevelColors = {

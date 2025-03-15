@@ -1,15 +1,13 @@
 "use client";
 
-
+import { useTabStore } from "@/store/store";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { fetchMetadataAction } from "../actions";
 import { MetadataSkeleton } from "./metadata-skeleton";
 import { MetadataError } from "./metadata-error";
-
+import { useProject } from "@/contexts/project-context";
 import { CloudAlert } from "lucide-react";
-import { useTabStore } from "../../../../store/store";
-import { useProject } from "../../../../contexts/project-context";
 
 type MetadataType = {
   title?: string;
