@@ -33,7 +33,7 @@ const Navbar = () => {
           <AnimationContainer animation="fadeLeft" delay={0.1}>
             <div className="flex items-center gap-x-4">
               <Link
-                href="https://github.com/Mihir2423/analytics"
+                href="https://github.com/ezeslucky/AnalytIQ.git"
                 target="_blank"
                 rel="noopener noreferrer"
               >
