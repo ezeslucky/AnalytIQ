@@ -29,6 +29,9 @@ model User {
   BugReport BugReport[]
 }
 
+
+
+
 model Project {
   id          String     @id @default(cuid())
   domain      String     @unique
