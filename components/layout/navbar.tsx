@@ -4,6 +4,7 @@ import React from 'react'
 import { Sheet, SheetContent, SheetTrigger } from '../ui/sheet'
 import { Button } from '../ui/button'
 import { Menu } from 'lucide-react'
+import Sidebar from './sidebar'
 
 function Navbar() {
   return (
@@ -21,7 +22,7 @@ function Navbar() {
 </Button>
         </SheetTrigger>
         <SheetContent side='left' className=' bg-black p-0 border-gray-800 border-r w-64'>
-
+<Sidebar/>
         </SheetContent>
     </Sheet>
 </div>
