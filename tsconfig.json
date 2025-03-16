@@ -6,8 +6,6 @@
     "skipLibCheck": true,
     "strict": true,
     "noEmit": true,
-    
-    "exactOptionalPropertyTypes": false,
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "bundler",
