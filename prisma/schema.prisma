@@ -1,9 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -11,4 +5,94 @@ generator client {
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String          @id @default(cuid())
+  name          String?
+  email         String?         @unique
+  emailVerified DateTime?
+  image         String?
+  role          String          @default("USER")
+  account       Account[]
+  sessions      Session[]
+  projects      Project[]
+  Authenticator Authenticator[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  BugReport BugReport[]
+}
+
+model Project {
+  id          String     @id @default(cuid())
+  domain      String     @unique
+  name        String
+  description String?
+  ownerId     String
+  owner       User       @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+  analytics   Analytics?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([ownerId])
+}
+
+model Analytics{
+  id String @id @default(cuid())
+  projectId String @unique
+  project Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+
+  totalPageVisits Int @default(0)
+  totalVisitors Int @default(0)
+
+  visitHistory VisitDate[]
+
+  roundAnalytics RouteAnalytics[]
+
+  countryAnalytics CountryAnalytics[]
+  deviceAnalytics DeviceAnalytics[]
+  osAnalytics OSAnalytics[]
+  sourceAnalytics SourceAnalytics[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+
+model VisitDate{
+  id String @id @default(cuid())
+  analyticsId String
+  analytics Analytics @relation(fields: [analyticsId], references: [id], onDelete: Cascade)
+
+  date DateTime @db.Date
+  pageVisits Int @default(0)
+  visitors Int @default(0)
+
+  @@unique([ analyticsId,date])
+  @@index([analyticsId])
+  @@index([date])
+}
+
+model RouteAnalytics {
+  id String @id @default(cuid())
+  analyticsId String
+  analytics Analytics @relation(fields: [analyticsId], references: [id] , onDelete: Cascade)
+
+  route String
+  visitors Int @default(0)
+  pageVisits Int @default(0)
+
+  @@unique([analyticsId,route])
+  @@index([analyticsId])
+}
+
+model CountryAnalytics{
+  id String @id @default(cuid())
+  analyticsId String
+  analytics Analytics @relation(fields: [analyticsId], references: [id],  onDelete: Cascade)
+
+  
 }
