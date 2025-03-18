@@ -12,7 +12,7 @@ const Provider = async ({ children }: Props) => {
   await headers();
 
   
-  const session = await auth();
+  const session =  auth();
 
   return <SessionProvider session={session}>{children}</SessionProvider>;
 };
