@@ -10,7 +10,7 @@ const Footer = () => {
     >
       <div className="md:flex justify-center md:items-center mt-8 w-full footer">
         <p className="mt-8 md:mt-0 text-muted-foreground text-sm">
-          &copy; {new Date().getFullYear()} Weblytics. All rights reserved.
+          &copy; {new Date().getFullYear()} AnalytIQ. All rights reserved.
         </p>
       </div>
     </AnimationContainer>
