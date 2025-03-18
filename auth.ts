@@ -1,6 +1,7 @@
-
+"use server"
 import db from "@/lib/db";
 import { PrismaAdapter } from "@auth/prisma-adapter";
+
 import type { DefaultSession } from "next-auth";
 import NextAuth from "next-auth";
 
@@ -40,9 +41,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
   callbacks: {
     async jwt({ token, user }) {
       if (user) {
-        // get user from db with the email
-        // if there is no user with the email, create new user
-        // else set the user data to token
+       
         token.id = user.id;
         token.role = user.role || "USER";
       }
