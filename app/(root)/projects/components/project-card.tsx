@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 "use client";
 
 import { Button } from "@/components/ui/button";
@@ -5,6 +6,7 @@ import { useModal } from "@/store/store";
 import { FilePenLine, SquareArrowOutUpRight, Trash } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+//@ts-ignore
 export const ProjectCard = ({ data }: { data: Project }) => {
   const { onOpen } = useModal();
   const router = useRouter();

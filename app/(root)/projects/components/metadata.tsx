@@ -3,11 +3,12 @@
 import { useTabStore } from "@/store/store";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { fetchMetadataAction } from "../actions";
-import { MetadataSkeleton } from "./metadata-skeleton";
+
 import { MetadataError } from "./metadata-error";
 import { useProject } from "@/contexts/project-context";
 import { CloudAlert } from "lucide-react";
+import { MetadataSkeleton } from "./metadata-skeleton";
+import { fetchMetadataAction } from "../actions";
 
 type MetadataType = {
   title?: string;
